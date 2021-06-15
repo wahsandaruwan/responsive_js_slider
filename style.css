@@ -1,0 +1,57 @@
+/* -----Reset----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* -----Common----- */
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    /* overflow: hidden; */
+}
+
+/* -----Slider----- */
+.slider{
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider .slides .slide{
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Overlay */
+.slider .slides .slide::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 5;
+}
+
+/* Images */
+.slider .slides .slide img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
