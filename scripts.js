@@ -6,7 +6,7 @@ var rbtn = document.querySelectorAll('.mn-btn');
 rbtn.forEach(function(item, index){
     item.addEventListener('click', function(){
         console.log(index);
-        radioNav(index);
+        manButtonNav(index);
     });
 });
 
