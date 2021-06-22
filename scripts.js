@@ -4,19 +4,19 @@ var rbtn = document.querySelectorAll('.mn-btn');
 var count = 1;
 var slideInt;
 
-// -----Click Event for Manual Button-----
+// -----Iterate All Navigation Buttons-----
 rbtn.forEach(function(item, index){
+    // Click Event for Buttons
     item.addEventListener('click', function(){
-        console.log(index);
         manButtonNav(index);
     });
 });
 
-// -----Funtion for Manual Button Navigation-----
+// -----Funtion for Manual Navigation-----
 function manButtonNav(index){
     for(var i = 0; i < slide.length; i++){
+        // Set Slide and Navigation Button
         if(i !== index){
-            console.log(i);
             slide[i].classList.remove("curr");
             rbtn[i].classList.remove("active");
         }
@@ -25,16 +25,19 @@ function manButtonNav(index){
             rbtn[index].classList.add("active");
         }
     }
+    // Clear Interval
     clearInterval(slideInt);
     slideInt = setInterval(nextImage, 5000);
 }
 
-// -----Funtion for Navigate Next Image-----
+// -----Funtion for Automatic Navigation-----
 function nextImage(){
     var curr = document.querySelector('.curr');
     var act = document.querySelector('.active');
+    // Unset Slide and Nav Button
     curr.classList.remove('curr');
     act.classList.remove('active');
+    // Set Next Slide and Navigation Button
     if(curr.nextElementSibling){
         curr.nextElementSibling.classList.add('curr');
         console.log(curr.nextElementSibling)
@@ -46,5 +49,5 @@ function nextImage(){
     }
 }
 
-// Slide Interval
+// -----Slide Interval-----
 slideInt = setInterval(nextImage, 5000);
