@@ -1,7 +1,6 @@
 // -----Variables-----
 var slide = document.querySelectorAll('.slide');
 var rbtn = document.querySelectorAll('.mn-btn');
-var count = 1;
 var slideInt;
 
 // -----Iterate All Navigation Buttons-----
@@ -40,7 +39,6 @@ function nextImage(){
     // Set Next Slide and Navigation Button
     if(curr.nextElementSibling){
         curr.nextElementSibling.classList.add('curr');
-        console.log(curr.nextElementSibling)
         act.nextElementSibling.classList.add('active');
     }
     else{
