@@ -1,7 +1,10 @@
 // -----Variables-----
 var slide = document.querySelectorAll('.slide');
-var rbtn = document.querySelectorAll('.mn-btn');
+var rbtn = document.querySelectorAll('.rad-btn');
+var leftArrow = document.querySelector('.left');
+var rightArrow = document.querySelector('.right');
 var slideInt;
+var intTime = 5000;
 
 // -----Iterate All Navigation Buttons-----
 rbtn.forEach(function(item, index){
@@ -11,7 +14,21 @@ rbtn.forEach(function(item, index){
     });
 });
 
-// -----Funtion for Manual Navigation-----
+// -----Click Events for Arrows-----
+// Right Arrows
+rightArrow.addEventListener('click', function(e){
+    e.preventDefault();
+    nextSlide();
+    clrInterval();
+});
+// Left Arrows
+leftArrow.addEventListener('click', function(e){
+    e.preventDefault();
+    prevSlide();
+    clrInterval();
+});
+
+// -----Funtion for Radio Navigation-----
 function manButtonNav(index){
     for(var i = 0; i < slide.length; i++){
         // Set Slide and Navigation Button
@@ -24,16 +41,14 @@ function manButtonNav(index){
             rbtn[index].classList.add("active");
         }
     }
-    // Clear Interval
-    clearInterval(slideInt);
-    slideInt = setInterval(nextImage, 5000);
+    clrInterval();
 }
 
-// -----Funtion for Automatic Navigation-----
-function nextImage(){
+// -----Funtion for the Next Slide-----
+function nextSlide(){
     var curr = document.querySelector('.curr');
     var act = document.querySelector('.active');
-    // Unset Slide and Nav Button
+    // Unset Current Slide and Nav Button
     curr.classList.remove('curr');
     act.classList.remove('active');
     // Set Next Slide and Navigation Button
@@ -47,5 +62,29 @@ function nextImage(){
     }
 }
 
-// -----Slide Interval-----
-slideInt = setInterval(nextImage, 5000);
+// -----Funtion for the Previous Slide-----
+function prevSlide(){
+    var curr = document.querySelector('.curr');
+    var act = document.querySelector('.active');
+    // Unset Current Slide and Nav Button
+    curr.classList.remove('curr');
+    act.classList.remove('active');
+    // Set Previous Slide and Navigation Button
+    if(curr.previousElementSibling){
+        curr.previousElementSibling.classList.add('curr');
+        act.previousElementSibling.classList.add('active');
+    }
+    else{
+        slide[slide.length - 1].classList.add('curr');
+        rbtn[rbtn.length - 1].classList.add('active');
+    }
+}
+
+// -----Function for Clear Slide Interval-----
+function clrInterval(){
+    clearInterval(slideInt);
+    slideInt = setInterval(nextSlide, intTime);
+}
+
+// -----Automatic Slide Navigation-----
+slideInt = setInterval(nextSlide, intTime);

@@ -129,6 +129,11 @@ input[type="radio"]{
     top: 50%;
     opacity: 0.5;
     transform: translateY(-50%);
+    transition: all 0.3s ease-in;
+}
+
+.slider .arrow:hover{
+    opacity: 1;
 }
 
 .slider .arrow i{
@@ -143,8 +148,8 @@ input[type="radio"]{
     right: 70px;
 }
 
-/* -----Manual Navigation----- */
-.slider .man-nav{
+/* -----Radio Navigation----- */
+.slider .rad-nav{
     width: 100%;
     position: fixed;
     bottom: 20px;
@@ -154,7 +159,7 @@ input[type="radio"]{
     align-items: center;
 }
 
-.slider .man-nav .mn-btn{
+.slider .rad-nav .rad-btn{
     width: 25px;
     height: 25px;
     border: 2px solid #fff;
@@ -164,7 +169,7 @@ input[type="radio"]{
     transition: all 0.3s ease-in;
 }
 
-.slider .man-nav .mn-btn:hover{
+.slider .rad-nav .rad-btn:hover{
     background-color: #fff;
     border-radius: 30%;
 }

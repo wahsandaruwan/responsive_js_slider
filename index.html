@@ -12,15 +12,16 @@
 <body>
     <!-- Slider Begins -->
     <div class="slider">
+        <!-- Radio Controllers -->
+        <input type="radio" name="sld" id="sld1">
+        <input type="radio" name="sld" id="sld2">
+        <input type="radio" name="sld" id="sld3">
+        <input type="radio" name="sld" id="sld4">
+        <input type="radio" name="sld" id="sld5">
+        
         <div class="slides">
-            <!-- Radio Controllers -->
-            <input type="radio" name="sld" id="sld1">
-            <input type="radio" name="sld" id="sld2">
-            <input type="radio" name="sld" id="sld3">
-            <input type="radio" name="sld" id="sld4">
-            <input type="radio" name="sld" id="sld5">
             <!-- Images -->
-            <div class="slide curr">
+            <div class="slide curr ab1">
                 <img src="./imgs/img1.jpg" alt="">
                 <div class="desc">
                     <h2>Beach Vollyball</h2>
@@ -28,7 +29,7 @@
                     <a href="#">View More</a>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide ab2">
                 <img src="./imgs/img2.jpg" alt="">
                 <div class="desc">
                     <h2>Football</h2>
@@ -36,7 +37,7 @@
                     <a href="#">View More</a>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide ab3">
                 <img src="./imgs/img3.jpg" alt="">
                 <div class="desc">
                     <h2>Cycling</h2>
@@ -44,7 +45,7 @@
                     <a href="#">View More</a>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide ab4">
                 <img src="./imgs/img4.jpg" alt="">
                 <div class="desc">
                     <h2>Tennis</h2>
@@ -52,7 +53,7 @@
                     <a href="#">View More</a>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide ab5">
                 <img src="./imgs/img5.jpg" alt="">
                 <div class="desc">
                     <h2>Cricket</h2>
@@ -61,16 +62,16 @@
                 </div>
             </div>
         </div>
-        <!-- Arrows -->
+        <!-- Arrow Navigation -->
         <a class="arrow left" href=""><i class="fas fa-arrow-circle-left"></i></a>
         <a class="arrow right" href=""><i class="fas fa-arrow-circle-right"></i></a>
-        <!-- Manual Navigation -->
-        <div class="man-nav">
-            <label for="sld1" class="mn-btn active"></label>
-            <label for="sld2" class="mn-btn"></label>
-            <label for="sld3" class="mn-btn"></label>
-            <label for="sld4" class="mn-btn"></label>
-            <label for="sld5" class="mn-btn"></label>
+        <!-- Radio Navigation -->
+        <div class="rad-nav">
+            <label for="sld1" class="rad-btn active"></label>
+            <label for="sld2" class="rad-btn"></label>
+            <label for="sld3" class="rad-btn"></label>
+            <label for="sld4" class="rad-btn"></label>
+            <label for="sld5" class="rad-btn"></label>
         </div>
     </div>
     <!-- Scripts -->
