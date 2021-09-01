@@ -3,7 +3,7 @@ var slide = document.querySelectorAll('.slide');
 var rbtn = document.querySelectorAll('.rad-btn');
 var leftArrow = document.querySelector('.left');
 var rightArrow = document.querySelector('.right');
-var slideInt;
+var slideInt; // Store On Going Timer
 var intTime = 5000;
 
 // -----Iterate All Navigation Buttons-----

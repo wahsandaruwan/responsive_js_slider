@@ -127,8 +127,8 @@ input[type="radio"]{
     z-index: 20;
     color: #fff;
     top: 50%;
-    opacity: 0.5;
     transform: translateY(-50%);
+    opacity: 0.5;
     transition: all 0.3s ease-in;
 }
 
@@ -141,7 +141,7 @@ input[type="radio"]{
 }
 
 .slider .left{
-    left: 70px; 
+    left: 70px;
 }
 
 .slider .right{
@@ -180,6 +180,7 @@ input[type="radio"]{
 
 /* -----Responsive----- */
 @media(max-width: 1100px){
+    /* Description */
     .slides .slide .desc{
         left: 50%;
         transform: translateX(-50%);
@@ -220,7 +221,7 @@ input[type="radio"]{
     }
 
     .slider .left{
-        left: 20px; 
+        left: 20px;
     }
 
     .slider .right{
@@ -228,7 +229,7 @@ input[type="radio"]{
     }
 
     /* Manual Navigation */
-    .slider .man-nav .mn-btn{
+    .slider .rad-nav .rad-btn{
         width: 15px;
         height: 15px;
     }
