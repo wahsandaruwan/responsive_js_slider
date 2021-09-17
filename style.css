@@ -33,7 +33,7 @@ input[type="radio"]{
     overflow: hidden;
 }
 
-/* Slides */
+/* Slide */
 .slider .slides .slide{
     position: absolute;
     width: 100%;
@@ -211,8 +211,8 @@ input[type="radio"]{
     }
 
     .slide .desc a{
-        padding: 10px 30px;
         font-size: 0.8rem;
+        padding: 10px 30px;
     }
 
     /* Navigation Arrows */

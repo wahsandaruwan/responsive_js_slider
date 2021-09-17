@@ -48,10 +48,10 @@ function manButtonNav(index){
 function nextSlide(){
     var curr = document.querySelector('.curr');
     var act = document.querySelector('.active');
-    // Unset Current Slide and Nav Button
+    // Unset Current Slide and Radio Button
     curr.classList.remove('curr');
     act.classList.remove('active');
-    // Set Next Slide and Navigation Button
+    // Set Next Slide and Radio Button
     if(curr.nextElementSibling){
         curr.nextElementSibling.classList.add('curr');
         act.nextElementSibling.classList.add('active');
@@ -66,10 +66,10 @@ function nextSlide(){
 function prevSlide(){
     var curr = document.querySelector('.curr');
     var act = document.querySelector('.active');
-    // Unset Current Slide and Nav Button
+    // Unset Current Slide and Radio Button
     curr.classList.remove('curr');
     act.classList.remove('active');
-    // Set Previous Slide and Navigation Button
+    // Set Previous Slide and Radio Button
     if(curr.previousElementSibling){
         curr.previousElementSibling.classList.add('curr');
         act.previousElementSibling.classList.add('active');
