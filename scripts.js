@@ -1,12 +1,12 @@
 // -----Variables-----
-var slide = document.querySelectorAll('.slide');
+var slides = document.querySelectorAll('.slide');
 var rbtn = document.querySelectorAll('.rad-btn');
 var leftArrow = document.querySelector('.left');
 var rightArrow = document.querySelector('.right');
 var slideInt; // Store On Going Timer
 var intTime = 5000;
 
-// -----Iterate All Navigation Buttons-----
+// -----Iterate All Radio Navigation Buttons-----
 rbtn.forEach(function(item, index){
     // Click Event for Buttons
     item.addEventListener('click', function(){
@@ -15,13 +15,13 @@ rbtn.forEach(function(item, index){
 });
 
 // -----Click Events for Arrows-----
-// Right Arrows
+// Right Arrow
 rightArrow.addEventListener('click', function(e){
     e.preventDefault();
     nextSlide();
     clrInterval();
 });
-// Left Arrows
+// Left Arrow
 leftArrow.addEventListener('click', function(e){
     e.preventDefault();
     prevSlide();
@@ -30,14 +30,14 @@ leftArrow.addEventListener('click', function(e){
 
 // -----Funtion for Radio Navigation-----
 function manButtonNav(index){
-    for(var i = 0; i < slide.length; i++){
+    for(var i = 0; i < slides.length; i++){
         // Set Slide and Navigation Button
         if(i !== index){
-            slide[i].classList.remove("curr");
+            slides[i].classList.remove("curr");
             rbtn[i].classList.remove("active");
         }
         else{
-            slide[index].classList.add("curr");
+            slides[index].classList.add("curr");
             rbtn[index].classList.add("active");
         }
     }
@@ -57,7 +57,7 @@ function nextSlide(){
         act.nextElementSibling.classList.add('active');
     }
     else{
-        slide[0].classList.add('curr');
+        slides[0].classList.add('curr');
         rbtn[0].classList.add('active');
     }
 }
@@ -75,7 +75,7 @@ function prevSlide(){
         act.previousElementSibling.classList.add('active');
     }
     else{
-        slide[slide.length - 1].classList.add('curr');
+        slides[slides.length - 1].classList.add('curr');
         rbtn[rbtn.length - 1].classList.add('active');
     }
 }
