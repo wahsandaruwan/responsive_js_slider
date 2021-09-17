@@ -31,7 +31,7 @@ leftArrow.addEventListener('click', function(e){
 // -----Funtion for Radio Navigation-----
 function manButtonNav(index){
     for(var i = 0; i < slides.length; i++){
-        // Set Slide and Navigation Button
+        // Set Slide and Radio Navigation Button
         if(i !== index){
             slides[i].classList.remove("curr");
             rbtn[i].classList.remove("active");
@@ -47,14 +47,14 @@ function manButtonNav(index){
 // -----Funtion for the Next Slide-----
 function nextSlide(){
     var curr = document.querySelector('.curr');
-    var act = document.querySelector('.active');
+    var active = document.querySelector('.active');
     // Unset Current Slide and Radio Button
     curr.classList.remove('curr');
-    act.classList.remove('active');
+    active.classList.remove('active');
     // Set Next Slide and Radio Button
     if(curr.nextElementSibling){
         curr.nextElementSibling.classList.add('curr');
-        act.nextElementSibling.classList.add('active');
+        active.nextElementSibling.classList.add('active');
     }
     else{
         slides[0].classList.add('curr');
@@ -65,14 +65,14 @@ function nextSlide(){
 // -----Funtion for the Previous Slide-----
 function prevSlide(){
     var curr = document.querySelector('.curr');
-    var act = document.querySelector('.active');
+    var active = document.querySelector('.active');
     // Unset Current Slide and Radio Button
     curr.classList.remove('curr');
     act.classList.remove('active');
     // Set Previous Slide and Radio Button
     if(curr.previousElementSibling){
         curr.previousElementSibling.classList.add('curr');
-        act.previousElementSibling.classList.add('active');
+        active.previousElementSibling.classList.add('active');
     }
     else{
         slides[slides.length - 1].classList.add('curr');
